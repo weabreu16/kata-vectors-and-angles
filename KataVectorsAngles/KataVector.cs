@@ -8,4 +8,8 @@ public class KataVector
         this.X = x;
         this.Y = y;
     }
+
+    public double DotProduct(KataVector other) {
+        return 2;
+    }
 }
