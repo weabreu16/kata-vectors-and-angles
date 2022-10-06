@@ -1,8 +1,8 @@
 ﻿namespace KataVectorsAngles;
 public class KataVector
 {
-    private int X { get; }
-    private int Y { get; }
+    public int X { get; }
+    public int Y { get; }
 
     public KataVector(int x, int y) {
         this.X = x;
@@ -14,6 +14,6 @@ public class KataVector
             throw new ArgumentException("Invalid vector");
         }
 
-        return 2;
+        return this.X * other.X + this.Y * other.Y;
     }
 }

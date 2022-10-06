@@ -20,4 +20,14 @@ public class DotProductTests
         
         Assert.Throws<ArgumentException>(() => { vector.DotProduct(null); });
     }
+
+    [Fact]
+    public void Should_return_4_if_1_1_dot_product_2_2() {
+        KataVector vector = new KataVector(1, 1);
+        KataVector other = new KataVector(2, 2);
+        
+        double result = vector.DotProduct(other);
+        
+        Assert.Equal(result, 4);
+    }
 }
