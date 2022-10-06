@@ -10,6 +10,10 @@ public class KataVector
     }
 
     public double DotProduct(KataVector other) {
+        if (other == null) {
+            throw new ArgumentException("Invalid vector");
+        }
+
         return 2;
     }
 }
