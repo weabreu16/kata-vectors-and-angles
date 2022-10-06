@@ -8,7 +8,6 @@ public class KataVector
         this.X = x;
         this.Y = y;
     }
-
     public double DotProduct(KataVector other) {
         if (other == null) {
             throw new ArgumentException("Invalid vector");
@@ -20,4 +19,13 @@ public class KataVector
        double result = Math.Sqrt(Math.Pow(this.X, 2) + Math.Pow(this.Y, 2));
        return result;
     }
+
+    public double AngleBetween(KataVector other) {
+        if (other == null) {
+            throw new ArgumentException("Invalid vector");
+        }
+        return Math.Round(Math.Acos(this.DotProduct(other) / (this.Magnitude() * other.Magnitude())),2);
+    }
+
+
 }
