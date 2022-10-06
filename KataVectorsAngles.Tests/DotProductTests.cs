@@ -30,4 +30,24 @@ public class DotProductTests
         
         Assert.Equal(result, 4);
     }
+
+    [Fact]
+    public void Should_return_24_if_5_1_dot_product_3_9() {
+        KataVector vector = new KataVector(5, 1);
+        KataVector other = new KataVector(3, 9);
+        
+        double result = vector.DotProduct(other);
+        
+        Assert.Equal(result, 24);
+    }
+
+    [Fact]
+    public void Should_return_if_5_minus1_dot_product_6_9() {
+        KataVector vector = new KataVector(5, -1);
+        KataVector other = new KataVector(6, 9);
+        
+        double result = vector.DotProduct(other);
+        
+        Assert.Equal(result, 21);
+    }
 }
