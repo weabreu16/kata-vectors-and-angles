@@ -22,9 +22,10 @@ public class KataVector
     }
 
     public double AngleBetween(KataVector other) {
-        if (other == null) {
-            throw new ArgumentException("Invalid vector");
+        if(other == null){
+            throw new ArgumentException("Invalid input");
         }
+
         return Math.Round(Math.Acos(this.DotProduct(other) / (this.Magnitude() * other.Magnitude())),2);
     }
 
