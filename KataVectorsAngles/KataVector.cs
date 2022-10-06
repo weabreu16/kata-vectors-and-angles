@@ -15,9 +15,10 @@ public class KataVector
 
         return this.X * other.X + this.Y * other.Y;
     }
+
     public double Magnitude(){
-       double result = Math.Sqrt(Math.Pow(this.X, 2) + Math.Pow(this.Y, 2));
-       return result;
+        double result = Math.Sqrt(Math.Pow(this.X, 2) + Math.Pow(this.Y, 2));
+        return result;
     }
 
     public double AngleBetween(KataVector other) {
